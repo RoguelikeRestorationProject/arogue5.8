@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arogue58", "arogue58.vcproj", "{2EEE53AB-A85A-4D4D-8DB2-B5F23513F415}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		ConfigName.2 = test
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2EEE53AB-A85A-4D4D-8DB2-B5F23513F415}.Debug.ActiveCfg = Debug|Win32
+		{2EEE53AB-A85A-4D4D-8DB2-B5F23513F415}.Debug.Build.0 = Debug|Win32
+		{2EEE53AB-A85A-4D4D-8DB2-B5F23513F415}.Release.ActiveCfg = Release|Win32
+		{2EEE53AB-A85A-4D4D-8DB2-B5F23513F415}.Release.Build.0 = Release|Win32
+		{2EEE53AB-A85A-4D4D-8DB2-B5F23513F415}.test.ActiveCfg = Debug|Win32
+		{2EEE53AB-A85A-4D4D-8DB2-B5F23513F415}.test.Build.0 = Debug|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1025 @@
+
+
+
+
+
+			   The Dungeons	of Doom
+
+			  AT&T Bell Laboratories
+			   The Dungeons	of Doom
+
+
+       1.  INTRODUCTION
+
+	    Rogue is a screen-oriented fantasy game set	in the
+       ever-changing Dungeons of Doom.	The game comes complete
+       with monsters, spells, weapons, armor, potions, and other
+       magical items.  The dungeon's geography changes with every
+       game, and although many magical items have certain
+       identifiable properties,	such as	turning	the player
+       invisible, the physical manifestation of	the magic changes
+       each game.  A red potion, for example, will cause the same
+       reaction	throughout a given game, but it	may be a completely
+       different potion	in a new game.
+
+	    Entering the dungeon with only a little food, armor,
+       and a weapon, the player	must develop a good strategy of
+       when to fight, when to run, and how to best use any magical
+       items found in the dungeon.  To make things interesting,	the
+       player has a quest to return one	of several unique
+       artifacts, rumored to lie deep in the dungeon's bowels.
+       Returning with this artifact brings great glory and the
+       title of	Complete Winner.  But even after finding the
+       artifact, the player may	wish to	continue further to match
+       wits with an arch-devil,	demon prince, or even a	deity found
+       far down	in the dungeon.	 Defeating such	a creature will
+       gain the	player many experience points, the basis for
+       scoring in Rogue.
+
+	    It is very difficult to return from	the Dungeons of
+       Doom.  Few people ever make it out alive.  Should this
+       unlikely	event occur, the player	would be proclaimed a
+       complete	winner and handsomely rewarded for any booty
+       removed from the	dungeon.
+
+
+       2.  CHARACTER CLASSES AND ATTRIBUTES
+
+	    Before placing the player in the dungeon, the game
+       requests	the player to select a character class:	 a fighter,
+       a magic user, a cleric, or a thief.
+
+       2.1  The_Fighter
+
+	    A fighter is very strong and will have a high strength
+       rating.	This great strength gives a fighter the	best odds
+       of winning a battle with	a monster.  At high experience
+       levels the fighter also gets to attack multiple times in	a
+       single turn.  This obviously further increases his chances
+       at winning battles.  Intrinsic to the fighter class is a
+       robustness which	results	in 1 to	10 extra hit points for
+
+
+
+
+
+
+
+
+
+
+
+				  - 2 -
+
+
+
+       every new experience level.
+
+       2.2  The_Magician
+
+	    A magician's major attribute is intelligence, which
+       enables the magician to cast spells.  The number	and variety
+       of spells increases as the magician gains experience and
+       intelligence.  Other types of characters	can cast spells,
+       but only	if they	manage to gain extraordinarily high
+       intelligence.  Magic users are not as hearty as fighters;
+       they receive 1 to 8 extra hit points for	every new
+       experience level.
+
+       2.3  The_Cleric
+
+	    A cleric has a high	wisdom rating and can thus pray.
+       The number and variety of prayers which the gods	are willing
+       to grant	to a cleric increase as	the cleric gains experience
+       and wisdom.  Other character types can pray only	if they
+       manage to gain extraordinary wisdom.
+
+	    Because of their religious nature, clerics can also
+       affect the "undead" beings, like	zombies	and ghouls, which
+       became monsters after they died.	 If an "undead"	creature is
+       next to a cleric, the cleric may	try to turn it and cause it
+       to flee.	 If the	cleric is sufficiently powerful	relative to
+       the monster, the	cleric will destroy it.	 This ability
+       increases as the	character gains	experience levels.
+
+	    Clerics can	gain from 1 to 8 extra hit points on
+       reaching	a new experience level.
+
+       2.4  The_Thief
+
+	    A thief is exceptionally dextrous and has a	good chance
+       to set a	trap or	rob a monster.	Any type of character can
+       try to set a trap or steal from a monster standing next to
+       the character, but the chances of success are low compared
+       to a thief's chances.
+
+	    By their nature, thieves can automatically detect all
+       the gold	on the current level of	the dungeon.  They are also
+       good at detecting hidden	traps.	Because	thieves	slink
+       along, they are not as likely as	other characters to wake
+       sleeping	monsters.  If a	thief manages to sneak up on a
+       creature	without	waking it, he will get a chance	to backstab
+       the monster. When this is done, the damage done by the thief
+       greatly increases based on his experience level.
+
+	    Thieves gain from 1	to 6 extra hit points from a new
+       experience level.
+
+
+
+
+
+
+
+
+
+
+
+				  - 3 -
+
+
+
+       2.5  Constitution
+
+	    Every character has	a constitution rating.	A character
+       with an exceptionally good constitution will gain more than
+       the normal amount of hit	points associated with the
+       character's class when the character reaches a new
+       experience level. Exceptional constitution also provides
+       better protection versus	poison-based attacks and diseases.
+
+       2.6  Experience_Levels
+
+	    Characters gain experience for killing monsters,
+       stealing	from monsters, and turning monsters.  Each
+       character class has a set of thresholds associated with it.
+       When a character	reaches	a threshold, the character attains
+       the next	experience level.  This	new level brings extra hit
+       points and a greater chance of success in performing the
+       abilities associated with the character's class.	 Magicians
+       receive new spells, and clerics receive new prayers.
+
+	    Thieves have the lowest threshold for gaining
+       experience levels, followed by clerics.	Fighters are next,
+       and magicians have the highest threshold.
+
+
+       3.  THE SCREEN
+
+	    During the normal course of	play, the screen consists
+       of three	separate sections:  the	top line of the	terminal,
+       the bottom two lines of the terminal, and the remaining
+       middle lines.  The top line reports actions which occur
+       during the game,	the middle section depicts the dungeon,	and
+       the bottom lines	describe the player's current condition.
+
+       3.1  The_Top_Line
+
+	    Whenever anything happens to the player, such as
+       finding a scroll	or hitting or being hit	by a monster, a
+       short report of the occurrence appears on the top line of
+       the screen.  When such reports occur quickly, one right
+       after another, the game displays	the notice followed by the
+       prompt '--More--.'  After reading this notice, the player
+       can press a space to display the	next message.  At such a
+       point, the game ignores all commands until the player
+       presses a space.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				  - 4 -
+
+
+
+       3.2  The_Dungeon_Section
+
+	    The	large middle section of	the screen displays the
+       player's	surroundings using the following symbols:
+
+       |	 A wall	of a room.
+
+       -	 A wall	of a room.
+
+       *	 A pile	of gold.
+
+       %	 A way to the next level.
+
+       +	 A doorway.
+
+       .	 The floor in a	room.
+
+       @	 The player.
+
+       _	 The player, when invisible.
+
+       #	 The floor in a	passageway.
+
+       !	 A flask containing a potion.
+
+       ?	 A sealed scroll.
+
+       :	 Some food.
+
+       )	 A weapon.
+
+		 Solid rock (denoted by	a space).
+
+       ]	 Some armor.
+
+       ;	 A miscellaneous magic item
+
+       ,	 An artifact
+
+       =	 A ring.
+
+       /	 A wand	or a staff.
+
+       ^	 The entrance to a trading post
+
+       >	 A trapdoor leading to the next	level
+
+       {	 An arrow trap
+
+       $	 A sleeping gas	trap
+
+
+
+
+
+
+
+
+
+
+
+
+				  - 5 -
+
+
+
+       }	 A beartrap
+
+       ~	 A trap	that teleports you somewhere else
+
+       `	 A poison dart trap
+
+       "	 A shimmering magic pool
+
+       '	 An entrance to	a maze
+
+       $	 Any magical item. (During magic detection)
+
+       >	 A blessed magical item. (During magic detection)
+
+       <	 A cursed magical item.	(During	magic detection)
+
+       A letter	 A monster.  Note that a given letter may signify
+		 multiple monsters, depending on the level of the
+		 dungeon.  The player can always identify a current
+		 monster by using the identify command ('/').
+
+       3.3  The_Status_Section
+
+	    The	bottom two lines of the	screen describe	the
+       player's	current	status.	 The first line	gives the player's
+       characteristics:
+
+	  o Intelligence (Int)
+
+	  o Strength (Str)
+
+	  o Wisdom (Wis)
+
+	  o Dexterity (Dxt)
+
+	  o Constitution (Const)
+
+	  o Encumbrance (Carry)
+
+	    Intelligence, strength, wisdom, dexterity, and
+       constitution have a normal maximum of 25, but can be higher
+       when augmented by a ring.  Encumbrance is a measurement	of
+       how much	the player can carry versus how	much he	is
+       currently carrying. The more you	carry relative to your
+       maximum causes you to use more food.
+
+	    The	second status line provides the	following
+       information:
+
+	  o The	current	level (Lvl) in the dungeon.  This number
+	    increases as the player goes further down.
+
+
+
+
+
+
+
+
+
+
+
+				  - 6 -
+
+
+
+	  o How	much gold (Au) the player is carrying.
+
+	  o The	player's current number	of hit points (Hp),
+	    followed in	parentheses by the player's current maximum
+	    number of hit points.  Hit points express the player's
+	    health.  As	a player heals by resting, the player's
+	    current hit	points gradually increase until	reaching
+	    the	current	maximum.  This maximum increases each time
+	    a player attains a new experience level.  If the
+	    player's current hit points	reach 0, the player dies.
+
+	  o The	player's armor class (Ac).  This number	describes
+	    the	amount of protection provided by the armor and
+	    rings currently worn by the	player.	 Wearing no armor
+	    is equivalent to an	armor class of 10.  The	protection
+	    level increases as the armor class decreases.
+
+	  o The	player's current experience level (Exp)	followed by
+	    the	player's experience points.  The player	can gain
+	    experience points by killing monsters, successfully
+	    stealing from monsters, and	turning	monsters.  When	a
+	    player gains enough	experience points to surpass a
+	    threshold that depends on the player's character type,
+	    the	player reaches a new experience	level.	A new
+	    experience level brings extra hit points and possibly
+	    added abilities, such as a new spell for a magician	or
+	    a new prayer for a cleric.
+
+	  o A description of the player's character.  This
+	    description	depends	on the player's	character type and
+	    experience level.
+
+
+       4.  COMMANDS
+
+	    A player can invoke	most Rogue commands by typing a
+       single character.  Some commands, however, require a
+       direction, in which case	the player types the command
+       character followed by a directional command.  Many commands
+       can be prefaced by a number, indicating how many	times the
+       command should be executed.
+
+	    When the player invokes a command referring	to an item
+       in the player's pack (such as reading a scroll),	the game
+       prompts for the item.  The player should	then type the
+       letter associated with the item,	as displayed by	the
+       inventory command.  Typing a '*'	at this	point produces a
+       list of the eligible items.
+
+	    Rogue understands the following commands:
+
+
+
+
+
+
+
+
+
+
+
+
+				  - 7 -
+
+
+
+       ?   Preceding a command by a '?'	produces a brief
+	   explanation of the command.	The command '?*' gives an
+	   explanation of all the commands.
+
+       /   Preceding a symbol by a '/' identifies the symbol.
+
+       h   Move	one position to	the left.
+
+       j   Move	one position down.
+
+       k   Move	one position up.
+
+       l   Move	one position to	the right.
+
+       y   Move	one position to	the top	left.
+
+       u   Move	one position to	the top	right.
+
+       b   Move	one position to	the bottom left.
+
+       n   Move	one position to	the bottom right.
+
+       H   Run to the left until reaching something interesting.
+
+       J   Run down until reaching something interesting.
+
+       K   Run up until	reaching something interesting.
+
+       L   Run to the right until reaching something interesting.
+
+       Y   Run to the top left until reaching something
+	   interesting.
+
+       U   Run to the top right	until reaching something
+	   interesting.
+
+       B   Run to the bottom left until	reaching something
+	   interesting.
+
+       N   Run to the bottom right until reaching something
+	   interesting.
+
+       t   This	command, followed by a directional command, prompts
+	   for an object from the players pack.	 The player then
+	   throws the object in	the specified direction.
+
+       f   When	this command precedes a	directional command, the
+	   player moves	in the specified direction until passing
+	   something interesting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+				  - 8 -
+
+
+
+       z   This	command	must be	followed by a directional command.
+	   Rogue then prompts for a wand or staff from the player's
+	   pack	and zaps it in the specified direction.
+
+       >   Go down to the next level.
+
+       <   Go up to the	next level.
+
+       s   Search for a	secret door or a trap in the circle
+	   surrounding the player.
+
+       .   This	command	(a dot)	causes the player to rest a turn.
+
+       i   Display an inventory	of the player's	pack.
+
+       I   This	command	prompts	for an item from the player's pack
+	   and displays	the inventory information for that item.
+
+       q   Quaff a potion from the player's pack.
+
+       r   Read	a scroll from the player's pack.
+
+       e   Eat some food from the player's pack.
+
+       w   Wield a weapon from the player's pack.
+
+       W   Wear	some armor or miscellaneous magic item from the
+	   player's pack.
+
+       T   Take	off whatever the player	is wearing.
+
+       P   Put on a ring from the player's pack.  The player can
+	   wear	a maximum of eight rings.
+
+       R   Remove a ring from the player's hand.
+
+       ^U  Uuse	a miscellaneous	magic item in the player's pack.
+
+       d   Drop	an item	from the player's pack.
+
+       c   When	the player types this command, Rogue prompts for an
+	   item	from the player's pack and a one-line name.  Rogue
+	   then	calls all similar items	(such as all the blue
+	   potions) by the specified name.
+
+       m   When	the player types this command, Rogue prompts for an
+	   item	from the player's pack and a one-line name.  Rogue
+	   then	marks the specified item with the given	name.
+
+       o   Typing this command causes Rogue to display all the
+	   settable options.  The player can then merely examine
+
+
+
+
+
+
+
+
+
+
+
+				  - 9 -
+
+
+
+	   the options or change any or	all of them.
+
+       C   This	command, restricted to magicians and characters
+	   with	exceptionally high intelligence, produces a listing
+	   of the magician's current supply of spells.	The player
+	   can select one of the displayed spells and, if the
+	   player's energy level is sufficiently high, cast it.
+	   The more complicated	the spell, the more energy it
+	   takes.
+
+       p   This	command, restricted to clerics and characters with
+	   exceptionally high wisdom, produces a listing of the
+	   cleric's known prayers.  The	player can then	offer one
+	   of these prayers to the character's deity.  Deities are
+	   not known for favoring characters which continually pray
+	   to them, and	they are most likely to	answer the least
+	   "ambitious" prayers.
+
+       a   This	command	is restricted to clerics and characters
+	   with	exceptionally high wisdom and must be followed by a
+	   directional command.	 If there is an	"undead" monster
+	   standing next to the	player in the specified	direction,
+	   there is a chance the player	will affect the	monster	by
+	   causing it to flee or possibly even destroying it.
+
+       ^   This	command	sets a trap and	is most	likely to succeed
+	   for a character with	a high dexterity, such as a thief.
+	   If the character is successful, Rogue prompts the player
+	   for a type of trap and sets it where	the player is
+	   standing.
+
+       G   This	command	is restricted to thieves.  It causes Rogue
+	   to display all the gold on the current level.
+
+       D   Dip something into a	magic pool.
+
+       ^T  This	command	is most	likely to succeed for a	character
+	   with	a high dexterity, such as a thief, and it must be
+	   followed by a directional command.  If there	is a
+	   monster standing next to the	player in the specified
+	   direction, the player tries to steal	an item	from the
+	   monster's pack.  If the player is successful, the
+	   monster does	not notice anything, but if the	player is
+	   unsuccessful, there is a chance the monster will wake
+	   up.
+
+       ^L  Redraw the screen.
+
+       ^R  Repeat the last message that	was displayed on the top
+	   line	of the screen.
+
+
+
+
+
+
+
+
+
+
+
+
+				  - 10 -
+
+
+
+       ^[  Typing an escape will usually cause Rogue to	cancel the
+	   current command.
+
+       v   Print the current Rogue version number.
+
+       !   Escape to the shell.
+
+       S   Quit	and save the game for resumption at a later time.
+
+       Q   Quit	without	saving the game.
+
+
+       5.  IMPLICIT COMMANDS
+
+	    There is no	"attack" command.  If a	player wishes to
+       attack a	monster, the player simply tries to move onto the
+       spot where the monster is standing.  The	game then assumes
+       that the	player wishes to attack	the monster with whatever
+       weapon the player is wielding.
+
+	    When the player moves onto an item,	the game
+       automatically places the	object into the	player's pack.	If
+       there is	no room	left in	the pack, the game announces that
+       fact and	leaves the item	on the floor.
+
+
+       6.  LIGHT
+
+	    Some rooms in the dungeon possess a	natural	light
+       source.	In other rooms and in corridors	the player can see
+       only those things within	a one space radius from	the player.
+       These dark rooms	can be lit with	magical	light or by a fire
+       beetle.
+
+
+       7.  WEAPONS AND ARMOR
+
+	    The	player can wield exactly one weapon at a time.
+       When the	player attacks a monster, the amount of	damage
+       depends on the particular weapon	the player is wielding.	 To
+       fire a projectile weapon, such as a crossbow or a short bow,
+       the player should wield the bow and "throw" the bolt or
+       arrow at	the monster.
+
+	    A weapon may be cursed or blessed, affecting the
+       likelihood of hitting a monster with the	weapon and the
+       damage the weapon will inflict on the monster.  If the
+       player has identified a weapon, the "to hit" and	"to damage"
+       bonuses appear in that order before the weapon's	name in	an
+       inventory listing.  A positive bonus indicates a	blessed
+       weapon, and a negative bonus usually indicates a	cursed
+
+
+
+
+
+
+
+
+
+
+
+				  - 11 -
+
+
+
+       weapon.	The player cannot release a cursed weapon.
+
+	    Without any	armor the player has an	armor class of 10.
+       The lower the player's armor class, the harder it is for	a
+       monster to hit the player, so wearing armor can improve the
+       player's	armor class.  A	cursed suit of armor, however,
+       offers poor protection and may sometimes	be worse than no
+       armor at	all.
+
+	    After the player has identified a suit of armor, the
+       protection bonus	appears	before the armor's name	in an
+       inventory listing.  If the bonus	is positive the	armor is
+       blessed,	and if it is negative, the armor is usually cursed.
+       The player cannot remove	a cursed suit of armor.
+
+	    Some monsters can corrode armor when they hit it.  If
+       such a monster hits the player when the player is wearing
+       metal armor, the	armor loses some of its	protection value,
+       but the corrosion does not curse	the armor.
+
+
+       8.  POTIONS AND SCROLLS
+
+	    The	player can frequently find potions and scrolls in
+       the dungeon.  In	any given dungeon, the player can
+       distinguish among the different types of	potions	by a
+       potion's	color and among	the different types of scrolls by a
+       scroll's	name.  Quaffing	a potion or reading a scroll
+       usually causes some magical occurrence.	Most potions and
+       scrolls may be cursed or	blessed.
+
+
+       9.  RINGS
+
+	    The	player can wear	a maximum of eight rings, and they
+       have a magical effect on	the player as long as they are
+       worn.  Some rings also speed up the player's metabolism,
+       making the player require food more often.  Many	rings can
+       be cursed or blessed, and the player cannot remove a cursed
+       ring.  The player can distinguish among different types of
+       rings by	a ring's jewel.
+
+
+       10.  WANDS AND STAVES
+
+	    Wands and staves affect the	player's environment.  The
+       player can zap a	wand or	staff at something and perhaps
+       shoot a bolt of lightning at it or teleport it away.  All
+       wands or	staves of the same type	are constructed	with the
+       same type of wood.  Some	wands and staves may be	cursed or
+       blessed.
+
+
+
+
+
+
+
+
+
+
+
+				  - 12 -
+
+
+
+       11.  FOOD
+
+	    The	player must be careful not to run out of food since
+       moving through the dungeon fighting monsters consumes a lot
+       of energy.  Starving results in the player's fainting for
+       increasingly longer periods of time, during which any nearby
+       monster can attack the player freely.
+
+
+       12.  GOLD
+
+	    Gold has one use in	a dungeon:  buying things.  One	can
+       buy things in two ways, either in a trading post	or from	a
+       quartermaster.  A trading post is a place "between levels"
+       of the dungeon and can be entered by stepping on	the
+       entrance.  A quartermaster is a person who will sometimes
+       appear and will try to sell the player some of his wares.
+       These wares are never cursed and	frequently blessed, though
+       blessed goods cost more than normal goods.  If the player
+       chooses to buy one of the quartermaster's items,	the
+       quartermaster trades the	item for the specified amount of
+       gold and	disappears.  Attacking a quartermaster causes him
+       to vanish without offering a trade.
+
+
+       13.  MISCELLANEOUS MAGIC	ITEMS
+
+	    Miscellaneous items	such as	a pair of boots	or a book
+       may be found within the dungeon.	 These items can usually be
+       used to the player's advantage (assuming	they are not
+       cursed).	 Some of these items can be worn, such as a cloak,
+       while others are	to be used, such as a book.
+
+
+       14.  ARTIFACTS
+
+	    Some monsters down in the depths of	the dungeon carry
+       unique artifacts.  The game begins as a quest to	retrieve
+       one of these items.  Each artifact appears only on its
+       owner's person.
+
+
+       15.  TRAPS
+
+	    A variety of traps,	including trap doors, bear traps,
+       and sleeping traps, are hidden in the dungeon.  They remain
+       hidden until sprung by a	monster	or the player.	A sprung
+       trap continues to function, but since it	is visible, an
+       intelligent monster is not likely to tread on it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+				  - 13 -
+
+
+
+       16.  THE	MONSTERS
+
+	    Each monster except	for the	merchant quartermaster
+       appears in a limited range of dungeon levels.  All monsters
+       of the same type	share the same abilities; all giant rats,
+       for example, can	give the player	a disease, and all
+       jackalweres can put the player to sleep.	 Monsters of the
+       same type can vary, however, such that one kobold may be
+       much more difficult to kill than	another	one.  In general,
+       the more	difficult it is	to kill	a monster, the more
+       experience points the monster is	worth.
+
+	    Most monsters attack by biting and clawing,	but some
+       monsters	carry weapons, including such projectile weapons as
+       short bows and crossbows, and some monsters have	breath
+       weapons.	 These latter monsters can attack the player from
+       across a	room or	down a corridor.
+
+	    Some monsters are more intelligent than others, and	the
+       more intelligent	a monster, the more likely that	the monster
+       will run	away if	it is about to die.  A fleeing monster will
+       not attack the player unless cornered.
+
+	    As the player moves	down in	the dungeon, the monsters
+       get more	powerful.  Deep	down in	the dungeon there exist
+       some one-of-a-kind monsters.  These monsters are	greatly
+       feared.	However, once a	"unique	monster" is killed, the
+       player will not find another in the current dungeon.
+
+
+       17.  OPTIONS
+
+	    Rogue has several options which may	be set by the
+       player:
+
+       terse  Setting this Boolean option results in shorter
+	      messages appearing on the	top line of the	screen.
+
+       jump   Setting this Boolean option results in waiting until
+	      the player has finished running to draw the player's
+	      path.  Otherwise the game	always displays	the path
+	      one step at a time.
+
+       step   Setting this Boolean option results in most listings,
+	      such as an inventory, appearing one item at a time on
+	      the top line of the screen.  When	this option is not
+	      set, the game clears the screen, displays	the list,
+	      and then redraws the dungeon.
+
+       flush  Setting this Boolean option results in flushing all
+	      typeahead	(pending) commands when	the player
+
+
+
+
+
+
+
+
+
+
+
+				  - 14 -
+
+
+
+	      encounters a monster.
+
+       askme  Setting this Boolean option results in the game
+	      prompting	the player for a name upon encountering	a
+	      new type of scroll, potion, ring,	staff, or wand.
+
+       name   This string is the player's name and defaults to the
+	      player's account name.
+
+       fruit  This string identifies the player's favorite fruit,
+	      sometimes	encountered in the dungeon.  It	defaults to
+	      slime-mold.
+
+       file   This string, which defaults to rogue.save, specifies
+	      the file to use for saving the game.
+
+       score  This string identifies the top-ten score file to use
+	      for the game.
+
+       class  This option specifies the	character class	of the
+	      rogue.  It can be	set only in the	ROGUEOPTS
+	      environment variable.
+
+	    The	player can set options at the beginning	of a game
+       via the ROGUEOPTS environment variable.	Naming a Boolean
+       option sets it, and preceding the Boolean option	name by
+       "no" clears it.	The syntax "stringoption=name" sets a
+       string option to	"name."	 So setting ROGUEOPTS to "terse,
+       jump, nostep, flush, askme, name=Ivan the Terrible,
+       fruit=pomegranate" would	set the	terse, jump, flush, and
+       askme Boolean options, clear the	step Boolean option, set
+       the player's name to "Ivan the Terrible," set the player's
+       favorite	fruit to a pomegranate,	and use	the defaults for
+       the save	file and the score file.
+
+	    The	player may change an option at any time	during the
+       game via	the option command, which results in a listing of
+       the current options.  Typing a new value	changes	the option,
+       a RETURN	moves to the next option, a '-'	moves to the
+       previous	option,	and an ESCAPE returns the player to the
+       dungeon.
+
+
+       18.  SCORING
+
+	    The	player receives	experience points for stealing
+       items from monsters, turning monsters (a	clerical ability),
+       and killing monsters.  When the player gets killed, the
+       player's	score equals the player's experience points.  A
+       player who quits	gets a score equal to the player's
+       experience points and gold.  If the player makes	it back	up
+
+
+
+
+
+
+
+
+
+
+
+				  - 15 -
+
+
+
+       out of the dungeon, the player's	score equals the player's
+       experience points plus the gold the player carried and the
+       gold received from selling the player's possessions.  Rogue
+       maintains a list	of the top ten scores to date, together
+       with the	name of	the player obtaining the score,	the level
+       where the player	finished, and the manner in which the
+       player ended the	game.
+
+
+       19.  ACKNOWLEDGEMENTS
+	    This version of Rogue is based on a	version	developed
+       at the University of California at Berkeley by Michael Toy
+       and Ken Arnold.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			   The Dungeons	of Doom
+
+			  AT&T Bell Laboratories
+			   The Dungeons	of Doom
+
+
+				 ABSTRACT
+
+
+
+	    Rogue was  first  introduced  by  Michael  Toy  at	the
+       University  of  California  at Berkeley as a screen-oriented
+       fantasy game.  The game had 26 types of	monsters  that	the
+       player could meet while exploring a dungeon generated by	the
+       computer.  Scrolls, potions, rings,  wands,  staves,  armor,
+       and  weapons  helped the	player to battle these monsters	and
+       to gain gold, the basis for scoring.
+
+	    The	version	of Rogue described in this guide  has  been
+       expanded	to include over	110 monsters with many new capabil-
+       ities.  Many of the monsters are	intelligent, and they, like
+       the player, must	avoid traps and	decide when it is better to
+       fight or	to run.	 The player chooses a  character  class	 at
+       the  beginning of the game which	defines	the player's abili-
+       ties.  Experience, rather than gold,  decides  the  player's
+       score.
+
+
+
